@@ -1,0 +1,120 @@
+<!--	Ignacio Portas 	(259779)		-->
+<!--	Franco Piriz 	(269387)		-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<script src="js/clases.js"></script>
+	<script src="js/funciones.js"></script>
+	<title>Gestión de Series</title>
+</head>
+<body>
+	<header>
+		<h1>Gestión de Series</h1>
+	</header>
+	<nav>
+		<ul>
+			<li class="clSeries" 		id="idLiSeries">		<a href="#">Series</a></li>
+			<li class="clOpiniones" 	id="idLiOpiniones">		<a href="#">Opiniones</a></li>
+			<li class="clEstadisticas" 	id="idLiEstadisticas">	<a href="#">Estadísticas</a></li>
+		</ul>
+	</nav>
+	<main>
+		<section class="clSeries" id="idSeries">
+			<h2>Manejo de Series</h2>
+			<form id="idFormSeries">
+				<label for="idNombre">Nombre</label><br>
+				<input type="text" name="Nombre" id="idNombre" placeholder="Nombre" maxlength="30" required><br>
+
+				<label for="idDescripcion">Descripción</label><br>
+				<input type="text" name="Descripcion" id="idDescripcion" placeholder="Descripción" maxlength="30" required><br>
+
+				<label for="idTemporadas">Cantidad de temporadas</label><br>
+				<input class="inputNumber" type="number" name="Temporadas" id="idTemporadas" min="1" max="20" required><br>
+
+				<label for="idCapitulos">Capitulos por temporada</label><br>
+				<input class="inputNumber" type="number" name="Capitulos" id="idCapitulos" min="1" max="30" required><br>
+
+				<button type="button" id="idAgregarSerie">Agregar/Actualizar</button>
+				<button type="reset" id="idResetSerie">Reset</button>
+				<button type="button" id="idPrevio">Previo</button>
+				<button type="button" id="idSiguiente">Siguiente</button>
+			</form>
+
+			<a href="#" id="idLogoImdb">
+				<img src="img/IMDb.jpeg" alt="Imagen IMDb">
+			</a>
+		</section>
+
+		<section class="clOpiniones" id="idOpiniones">
+			<h2>Datos sobre opiniones de visualización</h2>
+			<form id="idFormOpiniones">
+				<label for="idSerieOpiniones"> Serie </label><br>
+				<select name="Serie" id="idSerieOpiniones">
+					<option value="defecto">elija una serie</option>
+				</select><br>
+
+				<label for="idTemporadaOpiniones">Temporada</label><br>
+				<input class="inputNumber" type="number" name="Temporada" min="1" id="idTemporadaOpiniones" required><br>
+
+				<label for="idCapituloOpiniones">Capítulo</label><br>
+				<input class="inputNumber" type="number" name="Capitulo" min="1" id="idCapituloOpiniones" required><br>
+
+				<label for="idPuntaje">Puntaje (1-10)</label><br>
+				<input type="range" value="1" min="1" max="10" step="1" name="Puntaje" id="idPuntaje"><br>
+
+				<label for="idCometario">Comentarios</label><br>
+				<textarea name="comentarios" id="idCometario" placeholder="Escribe aquí tus comentarios" required></textarea><br>
+				<button type="button" id="idAgregarOpinion">Agregar/Actualizar</button>
+				<button type="reset" id="idReset">Reset</button>
+			</form>
+			<article>
+				<h2>Opiniones ingresadas de las series</h2>
+				<ul id="idListaOpiniones">
+				</ul>
+			</article>
+		</section>
+
+		<section id="idEstadisticas">
+			<h2>Información estadística</h2>
+			<article>
+				<h3>Series sin opiniones</h3>
+				<ul id="idSeriesSinOpiniones">
+				</ul>
+				<h3>Top-3 Series con la máxima cantidad de opiniones</h3>
+				<ul id="idSeriesTop3">
+				</ul>
+			</article>
+			<article>
+				<h3>Información general</h3>
+				<label>Orden:</label><br>
+                <input type="radio" name="Orden" id="idNombreSerie" value="nombre_serie" checked="">
+                <label for="idNombreSerie">nombre de serie</label>
+			    <input type="radio" name="Orden" id="idCantMegusta" value="cant_megusta"> 
+                <label for="idCantMegusta">cantidad de opiniones decreciente</label>
+                <br>
+                <table>
+			        <caption>Información detallada</caption>	
+				  	<tr>
+						<th>Serie</th>
+						<th>Cantidad de opiniones</th>
+			            <th>Promedio general</th>
+					 </tr>
+					 <tbody id="idTablaInfoDetallada">
+						 <tr>
+							 <td colspan=3>Sin datos</td>
+						 </tr>
+					 </tbody>						
+			    </table>
+			</article>
+		</section>
+	</main>
+	<footer>
+		<p>Cátedra de Programación - Programación 1 - 2do semestre 2020</p>
+		<p> &copy; Ignacio Portas (259779) - Franco Piriz (269387)</p>
+	</footer>
+</body>
+</html>

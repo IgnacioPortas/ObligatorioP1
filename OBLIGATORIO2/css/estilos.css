@@ -1,0 +1,158 @@
+/*	Ignacio Portas 	(259779)		*/
+/*	Franco Piriz 	(269387)		*/
+*{
+	margin: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+header {
+	width: 100%;
+	background: #900c37;
+	border-radius: 25px 0px 25px 0px;
+}
+nav	{
+	float: left;
+	width: 20%;
+	padding-top: 10px;
+}
+nav ul {
+	margin: 0px;
+	padding: 0px;
+}
+a {
+	text-decoration: none;
+	display: block;
+	color: black;
+}
+nav ul li {
+	list-style: none;
+	text-align: center;
+	display: block;
+	border-radius: 25px 0px 25px 0px;
+	background: linear-gradient(270deg, #c91529 1%, rgba(255,255,255,1) 100%);
+	padding: 3px;
+	margin: 5px;
+}
+#idLiSeries:hover {
+	background: #fccd45;
+}
+#idLiOpiniones:hover {
+	background: #fd732f;
+}
+#idLiEstadisticas:hover {
+	background: #c91529;
+}
+main {
+	float: left;
+	width: 80%;
+}
+
+/* --- Al inicio muestra la seccion series --- */
+#idSeries {
+	display: block;}
+#idOpiniones {
+	display: none;}
+#idEstadisticas {
+	display: none;}
+/* ---------------------------------------- */
+
+/* --- define colores a las secciones --- */
+section	{
+	border-radius: 25px 0px 25px 0px;
+	background: linear-gradient(270deg, #c91529 1%, rgba(255,255,255,1) 100%);
+	padding: 5px 10px 10px 10px
+}
+.clSeries {
+	background: linear-gradient(270deg, #fccd45 1%, rgba(255,255,255,1) 100%);
+}
+.clOpiniones {
+	background: linear-gradient(270deg, #fd732f 1%, rgba(255,255,255,1) 100%);
+}
+/* -------------------------------------- */
+
+button {
+	margin-top: 10px;
+}
+#idLogoImdb {
+	display: inline-block;
+}
+img {
+	padding: 5px;
+	background: black;
+	width: 60px;
+	margin-top: 10px;
+}
+h1 {
+	text-align: center;
+	color: white;
+	padding-top: 20px;
+	padding-bottom: 15px;
+	font-variant: small-caps;
+}
+h2 {
+	padding-top: 10px;
+	padding-bottom: 15px;
+	font-variant: small-caps;
+}
+h3 {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-weight: normal; /* le quita la negrita al titulo h3 */
+}
+label {
+	display: inline-block;
+	padding-top: 5px;
+}
+select {
+	width: 153px;
+	height: 21px;
+}
+h3, label {
+	font-size: 16px;
+}
+.inputNumber {
+	width: 50px;
+}
+textarea {
+	width: 220px;
+	height: 50px;
+}
+#idTablaInfoDetallada {
+	width: 80%;
+	margin-top: 10px;
+}
+table, th, tr, td {
+	border: 1px solid;
+}
+tr, td {
+	text-align: center;
+}
+/* --- define el pie de pagina --- */
+footer {
+	width: 100%;
+	float: left;
+	background: #900c37;
+	border-radius: 25px 0px 25px 0px;
+	padding-top: 20px;
+	padding-bottom: 15px;
+}
+footer p {
+	text-align: center;
+	color: white;
+	font-size: 12px;
+}
+/* ------------------------------- */
+
+
+@media screen and (max-width: 600px) {
+	nav {
+		width: 100%;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	main {
+		width: 100%;
+	}
+	table {
+		width: 100%;
+	}
+}
